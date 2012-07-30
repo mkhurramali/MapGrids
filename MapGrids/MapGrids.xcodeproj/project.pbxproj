@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		203ECF1915C692D1000C827C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF1815C692D1000C827C /* UIKit.framework */; };
+		203ECF1B15C692D1000C827C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF1A15C692D1000C827C /* Foundation.framework */; };
+		203ECF1D15C692D1000C827C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF1C15C692D1000C827C /* CoreGraphics.framework */; };
+		203ECF2315C692D1000C827C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 203ECF2115C692D1000C827C /* InfoPlist.strings */; };
+		203ECF2515C692D1000C827C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF2415C692D1000C827C /* main.m */; };
+		203ECF2915C692D2000C827C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF2815C692D2000C827C /* AppDelegate.m */; };
+		203ECF3115C692D2000C827C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF3015C692D2000C827C /* SenTestingKit.framework */; };
+		203ECF3215C692D2000C827C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF1815C692D1000C827C /* UIKit.framework */; };
+		203ECF3315C692D2000C827C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF1A15C692D1000C827C /* Foundation.framework */; };
+		203ECF3B15C692D2000C827C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 203ECF3915C692D2000C827C /* InfoPlist.strings */; };
+		203ECF3E15C692D2000C827C /* MapGridsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF3D15C692D2000C827C /* MapGridsTests.m */; };
+		203ECF5015C69392000C827C /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF4E15C69392000C827C /* MainView.m */; };
+		203ECF5115C69392000C827C /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 203ECF4F15C69392000C827C /* MainView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		203ECF3415C692D2000C827C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 203ECF0B15C692D1000C827C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 203ECF1315C692D1000C827C;
+			remoteInfo = MapGrids;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		203ECF1415C692D1000C827C /* MapGrids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapGrids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		203ECF1815C692D1000C827C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		203ECF1A15C692D1000C827C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		203ECF1C15C692D1000C827C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		203ECF2015C692D1000C827C /* MapGrids-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapGrids-Info.plist"; sourceTree = "<group>"; };
+		203ECF2215C692D1000C827C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		203ECF2415C692D1000C827C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		203ECF2615C692D1000C827C /* MapGrids-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapGrids-Prefix.pch"; sourceTree = "<group>"; };
+		203ECF2715C692D2000C827C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		203ECF2815C692D2000C827C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		203ECF2F15C692D2000C827C /* MapGridsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapGridsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		203ECF3015C692D2000C827C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		203ECF3815C692D2000C827C /* MapGridsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapGridsTests-Info.plist"; sourceTree = "<group>"; };
+		203ECF3A15C692D2000C827C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		203ECF3C15C692D2000C827C /* MapGridsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapGridsTests.h; sourceTree = "<group>"; };
+		203ECF3D15C692D2000C827C /* MapGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapGridsTests.m; sourceTree = "<group>"; };
+		203ECF4D15C69392000C827C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		203ECF4E15C69392000C827C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		203ECF4F15C69392000C827C /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		203ECF1115C692D1000C827C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF1915C692D1000C827C /* UIKit.framework in Frameworks */,
+				203ECF1B15C692D1000C827C /* Foundation.framework in Frameworks */,
+				203ECF1D15C692D1000C827C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		203ECF2B15C692D2000C827C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF3115C692D2000C827C /* SenTestingKit.framework in Frameworks */,
+				203ECF3215C692D2000C827C /* UIKit.framework in Frameworks */,
+				203ECF3315C692D2000C827C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		203ECF0915C692D1000C827C = {
+			isa = PBXGroup;
+			children = (
+				203ECF1E15C692D1000C827C /* MapGrids */,
+				203ECF3615C692D2000C827C /* MapGridsTests */,
+				203ECF1715C692D1000C827C /* Frameworks */,
+				203ECF1515C692D1000C827C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		203ECF1515C692D1000C827C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF1415C692D1000C827C /* MapGrids.app */,
+				203ECF2F15C692D2000C827C /* MapGridsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		203ECF1715C692D1000C827C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF1815C692D1000C827C /* UIKit.framework */,
+				203ECF1A15C692D1000C827C /* Foundation.framework */,
+				203ECF1C15C692D1000C827C /* CoreGraphics.framework */,
+				203ECF3015C692D2000C827C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		203ECF1E15C692D1000C827C /* MapGrids */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF4715C6930A000C827C /* MainView */,
+				203ECF2715C692D2000C827C /* AppDelegate.h */,
+				203ECF2815C692D2000C827C /* AppDelegate.m */,
+				203ECF1F15C692D1000C827C /* Supporting Files */,
+			);
+			path = MapGrids;
+			sourceTree = "<group>";
+		};
+		203ECF1F15C692D1000C827C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF2015C692D1000C827C /* MapGrids-Info.plist */,
+				203ECF2115C692D1000C827C /* InfoPlist.strings */,
+				203ECF2415C692D1000C827C /* main.m */,
+				203ECF2615C692D1000C827C /* MapGrids-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203ECF3615C692D2000C827C /* MapGridsTests */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF3C15C692D2000C827C /* MapGridsTests.h */,
+				203ECF3D15C692D2000C827C /* MapGridsTests.m */,
+				203ECF3715C692D2000C827C /* Supporting Files */,
+			);
+			path = MapGridsTests;
+			sourceTree = "<group>";
+		};
+		203ECF3715C692D2000C827C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF3815C692D2000C827C /* MapGridsTests-Info.plist */,
+				203ECF3915C692D2000C827C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203ECF4715C6930A000C827C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF4D15C69392000C827C /* MainView.h */,
+				203ECF4E15C69392000C827C /* MainView.m */,
+				203ECF4F15C69392000C827C /* MainView.xib */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		203ECF1315C692D1000C827C /* MapGrids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203ECF4115C692D2000C827C /* Build configuration list for PBXNativeTarget "MapGrids" */;
+			buildPhases = (
+				203ECF1015C692D1000C827C /* Sources */,
+				203ECF1115C692D1000C827C /* Frameworks */,
+				203ECF1215C692D1000C827C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapGrids;
+			productName = MapGrids;
+			productReference = 203ECF1415C692D1000C827C /* MapGrids.app */;
+			productType = "com.apple.product-type.application";
+		};
+		203ECF2E15C692D2000C827C /* MapGridsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203ECF4415C692D2000C827C /* Build configuration list for PBXNativeTarget "MapGridsTests" */;
+			buildPhases = (
+				203ECF2A15C692D2000C827C /* Sources */,
+				203ECF2B15C692D2000C827C /* Frameworks */,
+				203ECF2C15C692D2000C827C /* Resources */,
+				203ECF2D15C692D2000C827C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				203ECF3515C692D2000C827C /* PBXTargetDependency */,
+			);
+			name = MapGridsTests;
+			productName = MapGridsTests;
+			productReference = 203ECF2F15C692D2000C827C /* MapGridsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		203ECF0B15C692D1000C827C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = RIKSOF;
+			};
+			buildConfigurationList = 203ECF0E15C692D1000C827C /* Build configuration list for PBXProject "MapGrids" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 203ECF0915C692D1000C827C;
+			productRefGroup = 203ECF1515C692D1000C827C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				203ECF1315C692D1000C827C /* MapGrids */,
+				203ECF2E15C692D2000C827C /* MapGridsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		203ECF1215C692D1000C827C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF2315C692D1000C827C /* InfoPlist.strings in Resources */,
+				203ECF5115C69392000C827C /* MainView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		203ECF2C15C692D2000C827C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF3B15C692D2000C827C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		203ECF2D15C692D2000C827C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		203ECF1015C692D1000C827C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF2515C692D1000C827C /* main.m in Sources */,
+				203ECF2915C692D2000C827C /* AppDelegate.m in Sources */,
+				203ECF5015C69392000C827C /* MainView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		203ECF2A15C692D2000C827C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203ECF3E15C692D2000C827C /* MapGridsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		203ECF3515C692D2000C827C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 203ECF1315C692D1000C827C /* MapGrids */;
+			targetProxy = 203ECF3415C692D2000C827C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		203ECF2115C692D1000C827C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203ECF2215C692D1000C827C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		203ECF3915C692D2000C827C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203ECF3A15C692D2000C827C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		203ECF3F15C692D2000C827C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		203ECF4015C692D2000C827C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		203ECF4215C692D2000C827C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
+				INFOPLIST_FILE = "MapGrids/MapGrids-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		203ECF4315C692D2000C827C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
+				INFOPLIST_FILE = "MapGrids/MapGrids-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		203ECF4515C692D2000C827C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapGrids.app/MapGrids";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
+				INFOPLIST_FILE = "MapGridsTests/MapGridsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		203ECF4615C692D2000C827C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapGrids.app/MapGrids";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
+				INFOPLIST_FILE = "MapGridsTests/MapGridsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		203ECF0E15C692D1000C827C /* Build configuration list for PBXProject "MapGrids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203ECF3F15C692D2000C827C /* Debug */,
+				203ECF4015C692D2000C827C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		203ECF4115C692D2000C827C /* Build configuration list for PBXNativeTarget "MapGrids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203ECF4215C692D2000C827C /* Debug */,
+				203ECF4315C692D2000C827C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		203ECF4415C692D2000C827C /* Build configuration list for PBXNativeTarget "MapGridsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203ECF4515C692D2000C827C /* Debug */,
+				203ECF4615C692D2000C827C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 203ECF0B15C692D1000C827C /* Project object */;
+}
