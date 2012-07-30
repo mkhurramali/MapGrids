@@ -27,6 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    CLLocationCoordinate2D firstLocation;
+	firstLocation.latitude = 51.2795;
+	firstLocation.longitude = 1.082;
+	mapView = [[RMMapView alloc] initWithFrame:CGRectMake(0,0,320,420)
+										WithLocation:firstLocation];
+    //	[[mapView contents] setZoom:10.0];
+	[mapView setBackgroundColor:[UIColor greenColor]];
+	[[self view] addSubview:mapView];
+	[[self view] sendSubviewToBack:mapView];
 }
 
 - (void)viewDidUnload
