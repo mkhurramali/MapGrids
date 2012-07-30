@@ -7,12 +7,57 @@
 //
 
 #import "MainView.h"
+#import "RMLayerCollection.h"
 
 @interface MainView ()
 
 @end
 
 @implementation MainView
+
+@synthesize gridButton;
+
+#pragma mark - Grid Button Handling
+
+/**
+ * Switch between grids.
+ */
+- (IBAction)onGridButtonPressed:(id)sender {
+    // Next state for grid.
+    gridState = (gridState + 1) % 3;
+    
+    // Update button title.
+    switch (gridState) {
+        case NO_GRID:
+            [gridButton setTitle:@"None" forState:UIControlStateNormal];
+            break;
+        
+        case UTM_GRID:
+            [gridButton setTitle:@"UTM Grid" forState:UIControlStateNormal];
+            
+            // UTM Zone. Only initialize the first time we load path.
+            if ( utm == nil ) {
+                utm = [[UTMPath alloc] initForMap:mapView];
+                [utm setLineColor:[UIColor whiteColor]];
+                [utm setLineWidth:2];
+            }
+            
+            [[mapView.contents overlay] addSublayer:utm];
+            
+            break;
+            
+        case MGRS_GRID:
+            [gridButton setTitle:@"MGRS Grid" forState:UIControlStateNormal];
+            
+            // Remove utm zone.
+            [[mapView.contents overlay] removeSublayer:utm];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,8 +78,8 @@
 	firstLocation.longitude = 1.082;
 	mapView = [[RMMapView alloc] initWithFrame:CGRectMake(0,0,320,420)
 										WithLocation:firstLocation];
-    //	[[mapView contents] setZoom:10.0];
-	[mapView setBackgroundColor:[UIColor greenColor]];
+    
+    [[mapView contents] setZoom:4.0];
 	[[self view] addSubview:mapView];
 	[[self view] sendSubviewToBack:mapView];
 }

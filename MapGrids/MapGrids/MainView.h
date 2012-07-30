@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "RMMapView.h"
+#import "UTMPath.h"
+
+#define NO_GRID   0
+#define UTM_GRID  1
+#define MGRS_GRID 2
 
 @interface MainView : UIViewController {
     RMMapView *mapView;
+    UTMPath   *utm;
+    
+    // Manage button
+    int       gridState;
+    UIButton  *gridButton;
 }
+
+@property (nonatomic, strong) IBOutlet UIButton *gridButton;
+
+- (IBAction)onGridButtonPressed:(id)sender;
 
 @end

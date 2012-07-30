@@ -24,6 +24,7 @@
 		203ECF8B15C69C68000C827C /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF8A15C69C68000C827C /* libProj4.a */; };
 		203ECF9815C69FE5000C827C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF9715C69FE5000C827C /* QuartzCore.framework */; };
 		203ECF9A15C69FFE000C827C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF9915C69FFE000C827C /* libsqlite3.dylib */; };
+		203ECF9E15C6C42E000C827C /* UTMPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF9D15C6C42E000C827C /* UTMPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		203ECF8A15C69C68000C827C /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libProj4.a; path = "../../route-me/Proj4/build/Release-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		203ECF9715C69FE5000C827C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		203ECF9915C69FFE000C827C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		203ECF9C15C6C42E000C827C /* UTMPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTMPath.h; sourceTree = "<group>"; };
+		203ECF9D15C6C42E000C827C /* UTMPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTMPath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 		203ECF1E15C692D1000C827C /* MapGrids */ = {
 			isa = PBXGroup;
 			children = (
+				203ECF9B15C6C407000C827C /* UTMPath */,
 				203ECF4715C6930A000C827C /* MainView */,
 				203ECF2715C692D2000C827C /* AppDelegate.h */,
 				203ECF2815C692D2000C827C /* AppDelegate.m */,
@@ -204,6 +208,15 @@
 				203ECF8715C69B4A000C827C /* RM Unit Tests.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		203ECF9B15C6C407000C827C /* UTMPath */ = {
+			isa = PBXGroup;
+			children = (
+				203ECF9C15C6C42E000C827C /* UTMPath.h */,
+				203ECF9D15C6C42E000C827C /* UTMPath.m */,
+			);
+			name = UTMPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +359,7 @@
 				203ECF2515C692D1000C827C /* main.m in Sources */,
 				203ECF2915C692D2000C827C /* AppDelegate.m in Sources */,
 				203ECF5015C69392000C827C /* MainView.m in Sources */,
+				203ECF9E15C6C42E000C827C /* UTMPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
