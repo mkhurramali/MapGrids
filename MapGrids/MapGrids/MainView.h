@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RMMapView.h"
 #import "UTMPath.h"
+#import "MGRSPath.h"
 
 #define NO_GRID   0
 #define UTM_GRID  1
@@ -17,6 +18,7 @@
 @interface MainView : UIViewController {
     RMMapView *mapView;
     UTMPath   *utm;
+    MGRSPath  *mgrs;
     
     // Manage button
     int       gridState;

@@ -30,6 +30,12 @@
     switch (gridState) {
         case NO_GRID:
             [gridButton setTitle:@"None" forState:UIControlStateNormal];
+            
+            // If MGRS grid was added, remove it.
+            if ( mgrs != nil ) {
+                [[mapView.contents overlay] removeSublayer:mgrs];
+            }
+            
             break;
         
         case UTM_GRID:
@@ -51,6 +57,15 @@
             
             // Remove utm zone.
             [[mapView.contents overlay] removeSublayer:utm];
+            
+            // MGRS grids. Only initialize the first time we load path.
+            if ( mgrs == nil ) {
+                mgrs = [[MGRSPath alloc] initForMap:mapView];
+                [mgrs setLineColor:[UIColor whiteColor]];
+                [mgrs setLineWidth:2];
+            }
+            
+            [[mapView.contents overlay] addSublayer:mgrs];
             
             break;
             
