@@ -26,11 +26,11 @@
         for ( int i = MGRS_TOTAL_HORIZONTAL_LINES; i > 0; i-- ) {
             RMLatLong zoneStart;
             zoneStart.latitude = MGRS_START_LAT - ((MGRS_TOTAL_HORIZONTAL_LINES - i) * MGRS_ZONE_HEIGHT);
-            zoneStart.longitude = 180;
+            zoneStart.longitude = kMaxLong;
             
             RMLatLong zoneEnd;
             zoneEnd.latitude = MGRS_START_LAT - ((MGRS_TOTAL_HORIZONTAL_LINES - i) * MGRS_ZONE_HEIGHT);
-            zoneEnd.longitude = -180;
+            zoneEnd.longitude = -1 * kMaxLong;
             
             [self moveToLatLong:zoneStart];
             [self addLineToLatLong:zoneEnd];
