@@ -26,6 +26,9 @@
 		203ECF9A15C69FFE000C827C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 203ECF9915C69FFE000C827C /* libsqlite3.dylib */; };
 		203ECF9E15C6C42E000C827C /* UTMPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECF9D15C6C42E000C827C /* UTMPath.m */; };
 		203ECFA215C7932F000C827C /* MGRSPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ECFA115C7932F000C827C /* MGRSPath.m */; };
+		205CB20C15D308CC00963497 /* UTMGridManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205CB20B15D308CC00963497 /* UTMGridManager.m */; };
+		205CB21015D316A000963497 /* CentralMeridian.m in Sources */ = {isa = PBXBuildFile; fileRef = 205CB20F15D316A000963497 /* CentralMeridian.m */; };
+		205CB21415D31A2000963497 /* DistanceGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 205CB21315D31A2000963497 /* DistanceGrid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,13 +83,19 @@
 		203ECF4E15C69392000C827C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		203ECF4F15C69392000C827C /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		203ECF7215C69B49000C827C /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../../route-me/MapView/MapView.xcodeproj"; sourceTree = "<group>"; };
-		203ECF8A15C69C68000C827C /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libProj4.a; path = "../../route-me/Proj4/build/Release-iphoneos/libProj4.a"; sourceTree = "<group>"; };
+		203ECF8A15C69C68000C827C /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../../route-me/Proj4/build/Release-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		203ECF9715C69FE5000C827C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		203ECF9915C69FFE000C827C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		203ECF9C15C6C42E000C827C /* UTMPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTMPath.h; sourceTree = "<group>"; };
 		203ECF9D15C6C42E000C827C /* UTMPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTMPath.m; sourceTree = "<group>"; };
 		203ECFA015C7932F000C827C /* MGRSPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRSPath.h; sourceTree = "<group>"; };
 		203ECFA115C7932F000C827C /* MGRSPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRSPath.m; sourceTree = "<group>"; };
+		205CB20A15D308CC00963497 /* UTMGridManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTMGridManager.h; sourceTree = "<group>"; };
+		205CB20B15D308CC00963497 /* UTMGridManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTMGridManager.m; sourceTree = "<group>"; };
+		205CB20E15D316A000963497 /* CentralMeridian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CentralMeridian.h; sourceTree = "<group>"; };
+		205CB20F15D316A000963497 /* CentralMeridian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CentralMeridian.m; sourceTree = "<group>"; };
+		205CB21215D31A2000963497 /* DistanceGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceGrid.h; sourceTree = "<group>"; };
+		205CB21315D31A2000963497 /* DistanceGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceGrid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +163,7 @@
 		203ECF1E15C692D1000C827C /* MapGrids */ = {
 			isa = PBXGroup;
 			children = (
-				203ECF9F15C7930F000C827C /* MGRSPath */,
-				203ECF9B15C6C407000C827C /* UTMPath */,
+				205CB20915D308A800963497 /* UTMGridManager */,
 				203ECF4715C6930A000C827C /* MainView */,
 				203ECF2715C692D2000C827C /* AppDelegate.h */,
 				203ECF2815C692D2000C827C /* AppDelegate.m */,
@@ -230,6 +238,37 @@
 				203ECFA115C7932F000C827C /* MGRSPath.m */,
 			);
 			name = MGRSPath;
+			sourceTree = "<group>";
+		};
+		205CB20915D308A800963497 /* UTMGridManager */ = {
+			isa = PBXGroup;
+			children = (
+				205CB21115D319F800963497 /* DistanceGrid */,
+				205CB20D15D3168400963497 /* CentralMeridian */,
+				203ECF9F15C7930F000C827C /* MGRSPath */,
+				203ECF9B15C6C407000C827C /* UTMPath */,
+				205CB20A15D308CC00963497 /* UTMGridManager.h */,
+				205CB20B15D308CC00963497 /* UTMGridManager.m */,
+			);
+			name = UTMGridManager;
+			sourceTree = "<group>";
+		};
+		205CB20D15D3168400963497 /* CentralMeridian */ = {
+			isa = PBXGroup;
+			children = (
+				205CB20E15D316A000963497 /* CentralMeridian.h */,
+				205CB20F15D316A000963497 /* CentralMeridian.m */,
+			);
+			name = CentralMeridian;
+			sourceTree = "<group>";
+		};
+		205CB21115D319F800963497 /* DistanceGrid */ = {
+			isa = PBXGroup;
+			children = (
+				205CB21215D31A2000963497 /* DistanceGrid.h */,
+				205CB21315D31A2000963497 /* DistanceGrid.m */,
+			);
+			name = DistanceGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +413,9 @@
 				203ECF5015C69392000C827C /* MainView.m in Sources */,
 				203ECF9E15C6C42E000C827C /* UTMPath.m in Sources */,
 				203ECFA215C7932F000C827C /* MGRSPath.m in Sources */,
+				205CB20C15D308CC00963497 /* UTMGridManager.m in Sources */,
+				205CB21015D316A000963497 /* CentralMeridian.m in Sources */,
+				205CB21415D31A2000963497 /* DistanceGrid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +507,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../route-me/MapView/Map";
+				HEADER_SEARCH_PATHS = (
+					"../../route-me/MapView/Map",
+					"../../route-me/Proj4",
+				);
 				INFOPLIST_FILE = "MapGrids/MapGrids-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -478,7 +523,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapGrids/MapGrids-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../route-me/MapView/Map";
+				HEADER_SEARCH_PATHS = (
+					"../../route-me/MapView/Map",
+					"../../route-me/Proj4",
+				);
 				INFOPLIST_FILE = "MapGrids/MapGrids-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -539,6 +587,7 @@
 				203ECF4315C692D2000C827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203ECF4415C692D2000C827C /* Build configuration list for PBXNativeTarget "MapGridsTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +596,7 @@
 				203ECF4615C692D2000C827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

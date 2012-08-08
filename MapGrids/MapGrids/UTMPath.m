@@ -7,8 +7,51 @@
 //
 
 #import "UTMPath.h"
+#import "RMProjection.h"
+#import "RMTransform.h"
+#import "RMMapContents.h"
+#import "RMMercatorToScreenProjection.h"
 
 @implementation UTMPath
+
+#define DEGREE_TO_RADIAN(x) ( (x / 180.0) * M_PI)
+#define RADIAN_TO_DEGREE(x) ( (x * 180.0) / M_PI) 
+
+#pragma mark - Point at a distance
+
+/**
+ * Next point at a distance on the given course (in radians from north).
+ *
+ * Reference: http://www.movable-type.co.uk/scripts/latlong.html
+ */
+- (RMLatLong)pointFrom:(RMLatLong)point course:(float)course distance:(float)distance {
+    RMLatLong nextPoint;
+    
+    // Conversion to radian.
+    point.latitude = DEGREE_TO_RADIAN( point.latitude );
+    point.longitude = DEGREE_TO_RADIAN( point.longitude );
+    
+    // lat2 = asin(sin(lat1)*cos(d/R) + cos(lat1)*sin(d/R)*cos(θ))
+    nextPoint.latitude = asin( ( sin( point.latitude ) * cos( distance / UTM_EARTH_RADIUS ) ) +
+                               ( cos( point.latitude ) * sin( distance / UTM_EARTH_RADIUS ) * cos( course )));
+    
+    // lon2 = lon1 + atan2(sin(θ)*sin(d/R)*cos(lat1), cos(d/R)−sin(lat1)*sin(lat2))
+    nextPoint.longitude = point.longitude + 
+                atan2( sin( course ) * sin( distance / UTM_EARTH_RADIUS) * cos( point.latitude ) ,
+                       cos( distance / UTM_EARTH_RADIUS ) - ( sin( point.latitude ) * sin( nextPoint.latitude ) ));
+    
+    // Conversion to degrees
+    nextPoint.latitude = RADIAN_TO_DEGREE(nextPoint.latitude);
+    nextPoint.longitude = RADIAN_TO_DEGREE(nextPoint.longitude);
+    
+    return nextPoint;
+}
+
+#pragma mark - Coordinate to UTM zone
+
+- (int)coordinateToUTM:(CLLocationCoordinate2D)point {
+    return floor(( point.longitude + 180 ) / 6.0);
+}
 
 #pragma mark - Initialization
 
@@ -36,7 +79,6 @@
             [self moveToLatLong:zoneStart];
             [self addLineToLatLong:zoneEnd];
         }
-
     }
     
     return self;

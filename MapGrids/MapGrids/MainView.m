@@ -7,7 +7,6 @@
 //
 
 #import "MainView.h"
-#import "RMLayerCollection.h"
 
 @interface MainView ()
 
@@ -26,50 +25,21 @@
     // Next state for grid.
     gridState = (gridState + 1) % 3;
     
+    // Set the grid type
+    [gridManager setGridType:gridState];
+    
     // Update button title.
     switch (gridState) {
-        case NO_GRID:
+        case GRID_MANAGER_NO_GRID:
             [gridButton setTitle:@"None" forState:UIControlStateNormal];
-            
-            // If MGRS grid was added, remove it.
-            if ( mgrs != nil ) {
-                [[mapView.contents overlay] removeSublayer:mgrs];
-            }
-            
             break;
         
-        case UTM_GRID:
+        case GRID_MANAGER_UTM_GRID:
             [gridButton setTitle:@"UTM Grid" forState:UIControlStateNormal];
-            
-            // UTM Zone. Only initialize the first time we load path.
-            if ( utm == nil ) {
-                utm = [[UTMPath alloc] initForMap:mapView];
-                [utm setLineColor:[UIColor whiteColor]];
-                [utm setLineWidth:2];
-            }
-            
-            [[mapView.contents overlay] addSublayer:utm];
-            
             break;
             
-        case MGRS_GRID:
+        case GRID_MANAGER_MGRS_GRID:
             [gridButton setTitle:@"MGRS Grid" forState:UIControlStateNormal];
-            
-            // Remove utm zone.
-            [[mapView.contents overlay] removeSublayer:utm];
-            
-            // MGRS grids. Only initialize the first time we load path.
-            if ( mgrs == nil ) {
-                mgrs = [[MGRSPath alloc] initForMap:mapView];
-                [mgrs setLineColor:[UIColor whiteColor]];
-                [mgrs setLineWidth:2];
-            }
-            
-            [[mapView.contents overlay] addSublayer:mgrs];
-            
-            break;
-            
-        default:
             break;
     }
 }
@@ -97,6 +67,10 @@
     [[mapView contents] setZoom:4.0];
 	[[self view] addSubview:mapView];
 	[[self view] sendSubviewToBack:mapView];
+    
+    // Set up the grid manager and make it the delegate for this map.
+    gridManager = [[UTMGridManager alloc] initWithMapView:mapView];
+    mapView.delegate = gridManager;
 }
 
 - (void)viewDidUnload

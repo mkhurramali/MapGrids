@@ -12,6 +12,6 @@
 #define MGRS_START_LAT                   78
 #define MGRS_ZONE_HEIGHT                 8
 
-@interface MGRSPath : UTMPath
+@interface MGRSPath : RMPath
 
 @end
