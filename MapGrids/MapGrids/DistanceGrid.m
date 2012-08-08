@@ -71,6 +71,30 @@
                 [self moveToScreenPoint:start];
                 [self addLineToScreenPoint:end];
             }
+            
+            // Now the horizontal lines.
+            start = CGPointMake( 0, screenHeight / 2);
+            end = CGPointMake(screenWidth, screenHeight / 2);
+            
+            [self moveToScreenPoint:start];
+            [self addLineToScreenPoint:end];
+            
+            // Starting from the center, add all grid lines.
+            for ( int i = gridDistance / metersPerPixel; i <= (screenHeight / 2); i += (gridDistance / metersPerPixel) ) {
+                // Right line
+                start = CGPointMake( 0,  (screenHeight / 2) + i);
+                end = CGPointMake(  screenWidth, (screenHeight / 2) + i );
+                
+                [self moveToScreenPoint:start];
+                [self addLineToScreenPoint:end];
+                
+                // Left line.
+                start = CGPointMake( 0, (screenHeight / 2) - i);
+                end = CGPointMake( screenWidth, (screenHeight / 2) - i);
+                
+                [self moveToScreenPoint:start];
+                [self addLineToScreenPoint:end];
+            }
         }
     }
     return self;
